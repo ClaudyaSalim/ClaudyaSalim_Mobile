@@ -11,53 +11,27 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome"
+        android:text="Welcome,"
+        android:textSize="10pt"
         android:layout_marginTop="10pt"
         android:layout_marginLeft="10pt"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/tv_login"/>
+        android:id="@+id/tv_welcome"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email Address"
+        android:text="User"
+        android:textSize="20pt"
         android:layout_marginTop="10pt"
         android:layout_marginLeft="10pt"
-        android:id="@+id/tv_email"/>
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Email Address"
-        android:inputType="textEmailAddress"
-        android:layout_marginLeft="10pt"
-        android:id="@+id/et_email"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Password"
-        android:layout_marginTop="10pt"
-        android:layout_marginLeft="10pt"
-        android:id="@+id/tv_password"/>
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:layout_marginLeft="10pt"
-        android:id="@+id/et_password"/>
+        android:id="@+id/tv_user"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit"
+        android:text="Logout"
         android:layout_marginTop="10pt"
         android:layout_marginLeft="10pt"
-        android:id="@+id/btn_submit" />
+        android:id="@+id/btn_logout" />
 
 </LinearLayout>

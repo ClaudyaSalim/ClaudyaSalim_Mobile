@@ -2,22 +2,35 @@ package com.example.claudyasalim_sesi2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    Button logout;
+    TextView user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnSubmit = findViewById(R.id.btn_submit);
+        logout = findViewById(R.id.btn_logout);
+        user = findViewById(R.id.tv_user);
 
-        btnSubmit.setOnClickListener(view -> {
-            Toast.makeText(MainActivity.this, "Logged in!", Toast.LENGTH_SHORT).show();
+        Intent mainIntent = getIntent();
+        String name = mainIntent.getStringExtra("account_username");
+
+        user.setText(name);
+
+        logout.setOnClickListener(v-> {
+            Toast.makeText(MainActivity.this, "You are logged out!", Toast.LENGTH_SHORT).show();
+            Intent toLoginIntent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(toLoginIntent);
         });
     }
 }

@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/TLOIS/Documents/BNCC/Aksub FAVE/ClaudyaSalim_sesi2/app/src/main/res/layout/activity_login.xml" value="0.2552083333333333" />
         <entry key="..\:/Users/TLOIS/Documents/BNCC/Aksub FAVE/ClaudyaSalim_sesi2/app/src/main/res/layout/activity_main.xml" value="0.24114583333333334" />
+        <entry key="..\:/Users/TLOIS/Documents/BNCC/Aksub FAVE/ClaudyaSalim_sesi2/app/src/main/res/layout/activity_register.xml" value="0.25" />
       </map>
     </option>
   </component>
