@@ -37,8 +37,8 @@ public class RegisterActivity extends AppCompatActivity {
 
             Toast.makeText(RegisterActivity.this, "Registered!", Toast.LENGTH_SHORT).show();
 
-//            Intent toMainIntent = new Intent(RegisterActivity.this, MainActivity.class);
-//            startActivity(toMainIntent);
+            Intent toMainIntent = new Intent(RegisterActivity.this, LoginActivity.class);
+            startActivity(toMainIntent);
         });
 
         toLogin.setOnClickListener(v-> {
