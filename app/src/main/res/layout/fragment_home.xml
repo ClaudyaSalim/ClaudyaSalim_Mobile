@@ -15,24 +15,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome,"
-            android:textSize="10pt"
-            android:id="@+id/tv_welcome"/>
+            android:text="Collections: "
+            android:textSize="30dp"
+            android:layout_marginBottom="40dp"
+            android:id="@+id/tv_collections" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="User"
-            android:textSize="20pt"
-            android:layout_marginTop="20dp"
-            android:id="@+id/tv_user"/>
+            android:text="No Collections yet"
+            android:textSize="20dp"
+            android:id="@+id/tv_listCollections" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Logout"
-            android:layout_marginTop="20dp"
-            android:id="@+id/btn_logout" />
     </LinearLayout>
 
 </FrameLayout>

@@ -17,47 +17,34 @@ import com.google.android.material.tabs.TabLayoutMediator;
 
 public class MainActivity extends AppCompatActivity {
 
-//    Button logout;
-//    TextView user;
-    TabLayout tab;
-    ViewPager2 viewPager2;
-    PageAdapter pageAdapter;
+    Button logout, toUser;
+    TextView user;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tab = findViewById(R.id.tab);
-        viewPager2 = findViewById(R.id.view_pager);
+        logout = findViewById(R.id.btn_logout);
+        toUser = findViewById(R.id.btn_toUser);
+        user = findViewById(R.id.tv_user);
 
-        setViewPager2(viewPager2);
+        Intent mainIntent = getIntent();
+        String name = mainIntent.getStringExtra("account_username");
 
-        new TabLayoutMediator(tab, viewPager2, ((tab, position)-> {
-            tab.setText(pageAdapter.getTitle(position));
-        })).attach();
+        user.setText(name);
 
-//        logout = findViewById(R.id.btn_logout);
-//        user = findViewById(R.id.tv_user);
-//
-//        Intent mainIntent = getIntent();
-//        String name = mainIntent.getStringExtra("account_username");
-//
-//        user.setText(name);
-//
-//        logout.setOnClickListener(v-> {
-//            Toast.makeText(MainActivity.this, "You are logged out!", Toast.LENGTH_SHORT).show();
-//            Intent toLoginIntent = new Intent(MainActivity.this, LoginActivity.class);
-//            startActivity(toLoginIntent);
-//        });
+        toUser.setOnClickListener(v-> {
+            Intent toUserIntent = new Intent(MainActivity.this, UserActivity.class);
+            startActivity(toUserIntent);
+        });
+
+        logout.setOnClickListener(v-> {
+            Toast.makeText(MainActivity.this, "You are logged out!", Toast.LENGTH_SHORT).show();
+            Intent toLoginIntent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(toLoginIntent);
+        });
     }
 
-    private void setViewPager2 (ViewPager2 viewPager2){
-        if(pageAdapter==null){
-            pageAdapter = new PageAdapter(this);
-            pageAdapter.addFragment(new HomeFragment(), "Home");
-            pageAdapter.addFragment(new SettingsFragment(), "Settings");
-            viewPager2.setAdapter(pageAdapter);
-        }
-    }
 }

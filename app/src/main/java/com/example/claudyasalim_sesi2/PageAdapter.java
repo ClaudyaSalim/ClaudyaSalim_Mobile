@@ -35,4 +35,5 @@ public class PageAdapter extends FragmentStateAdapter {
     public String getTitle(int position){
         return fragmentTitle.get(position);
     }
+
 }
