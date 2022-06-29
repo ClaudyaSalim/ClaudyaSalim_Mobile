@@ -6,37 +6,58 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:gravity="center">
+    android:padding="40dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome,"
-        android:textSize="10pt"
-        android:id="@+id/tv_welcome"/>
+        android:orientation="horizontal" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="User"
-        android:textSize="20pt"
-        android:layout_marginTop="20dp"
-        android:id="@+id/tv_user"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="20dp"
+            android:orientation="vertical">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="To User"
-        android:layout_marginTop="20dp"
-        android:id="@+id/btn_toUser" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome,"
+                android:textSize="10pt"
+                android:id="@+id/tv_welcome"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Logout"
-        android:layout_marginTop="20dp"
-        android:id="@+id/btn_logout" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User"
+                android:textSize="20pt"
+                android:layout_marginTop="20dp"
+                android:id="@+id/tv_user"/>
 
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To User"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/btn_toUser" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:layout_marginTop="20dp"
+            android:id="@+id/btn_logout" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_collections"
+        android:id="@+id/recycler_view"/>
 
 
 </LinearLayout>
