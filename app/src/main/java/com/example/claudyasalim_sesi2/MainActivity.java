@@ -2,6 +2,7 @@ package com.example.claudyasalim_sesi2;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
@@ -18,6 +19,7 @@ import android.widget.Toast;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,9 +27,9 @@ public class MainActivity extends AppCompatActivity {
     Button logout, toUser;
     TextView user;
 //    private RecyclerView collectionRecycleView;
-    private RecyclerView collectionRecycleView;
-    private CollectionsAdapter collectionRecycleViewAdapter;
-    private List<String> collectionList;
+    RecyclerView collectionRecycleView;
+    CollectionsAdapter collectionRecycleViewAdapter;
+    ArrayList<String> collectionList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         logout = findViewById(R.id.btn_logout);
         toUser = findViewById(R.id.btn_toUser);
         user = findViewById(R.id.tv_user);
+        collectionList = new ArrayList<>();
 
         Intent mainIntent = getIntent();
         String name = mainIntent.getStringExtra("account_username");
@@ -59,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         collectionRecycleView = findViewById(R.id.recycler_view);
+        collectionRecycleView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false));
         collectionRecycleViewAdapter = new CollectionsAdapter(collectionList);
         collectionRecycleView.setAdapter(collectionRecycleViewAdapter);
 

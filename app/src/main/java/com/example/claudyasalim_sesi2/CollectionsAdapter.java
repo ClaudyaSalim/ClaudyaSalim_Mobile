@@ -9,13 +9,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CollectionsAdapter extends RecyclerView.Adapter<CollectionsAdapter.ViewHolder> {
 
-    private final List <String> collectionItems;
+    private final ArrayList<String> collectionItems;
 
-    public CollectionsAdapter (List<String> collectionItems) {
+    public CollectionsAdapter (ArrayList<String> collectionItems) {
         this.collectionItems = collectionItems;
     }
 

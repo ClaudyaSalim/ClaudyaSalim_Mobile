@@ -8,50 +8,40 @@
     android:orientation="vertical"
     android:padding="40dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:text="Welcome,"
+        android:textSize="10pt"
+        android:id="@+id/tv_welcome"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User"
+        android:textSize="20pt"
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_user"/>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingRight="20dp"
-            android:orientation="vertical">
-
-            <TextView
+            android:orientation="horizontal">
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Welcome,"
-                android:textSize="10pt"
-                android:id="@+id/tv_welcome"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="User"
-                android:textSize="20pt"
+                android:text="To User"
                 android:layout_marginTop="20dp"
-                android:id="@+id/tv_user"/>
+                android:layout_marginRight="10dp"
+                android:id="@+id/btn_toUser" />
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:layout_marginTop="20dp"
+                android:id="@+id/btn_logout" />
         </LinearLayout>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="To User"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="10dp"
-            android:id="@+id/btn_toUser" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Logout"
-            android:layout_marginTop="20dp"
-            android:id="@+id/btn_logout" />
-
-    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
