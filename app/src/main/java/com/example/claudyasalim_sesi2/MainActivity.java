@@ -2,6 +2,7 @@ package com.example.claudyasalim_sesi2;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.PagerAdapter;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView collectionRecycleView;
     CollectionsAdapter collectionRecycleViewAdapter;
     ArrayList<String> collectionList;
+    MainViewModel mainViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
             Intent toLoginIntent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(toLoginIntent);
         });
+
+        mainViewModel = new ViewModelProvider(this, new MainViewModelFactory(getApplication())).get(MainViewModel.class);
 
         collectionList.add("Artifact");
         collectionList.add("Seashells");

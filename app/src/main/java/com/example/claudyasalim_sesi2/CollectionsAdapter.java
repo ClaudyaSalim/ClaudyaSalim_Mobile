@@ -48,4 +48,5 @@ public class CollectionsAdapter extends RecyclerView.Adapter<CollectionsAdapter.
             name = itemView.findViewById(R.id.tv_name);
         }
     }
+
 }
